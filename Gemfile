@@ -30,6 +30,10 @@ gem 'pg'
 
 gem 'devise'
 
+gem 'json'
+
+gem 'acts-as-taggable-on', '~> 3.2.6'
+
 group :production do
   gem 'rails_12factor'
 end

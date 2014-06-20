@@ -12,5 +12,40 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
+
+
+$(document).ready(function(){
+  $('#new_skill').on('submit', function(event){
+    event.preventDefault();
+    var form = $(this);
+    var username = $('#skill_username').val();
+    var bio = $('#skill_bio').val();
+    var skill = $('#skill_skills').val();
+    var tolearn = $('#skill_tolearn').val();
+
+    $.ajax({
+      url: form.attr('action'),
+      method: form.attr('method'),
+      data: {
+        "skill": {
+          "username": username,
+          "bio": bio,
+          "skill": skill,
+          "tolearn": tolearn
+        }
+      },
+      dataType: "json",
+      success: function(data) {
+        console.log(data);
+        var ul = $('ul')
+        var skill =  "<li><b>"+data.username+"</b> - " +data.bio + "</li>";
+        ul.append(skill);
+        $(':text').val('');
+      },
+      error: function(){
+        alert("Server is broken!");
+      }
+    });
+  });
+});

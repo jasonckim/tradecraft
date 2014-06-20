@@ -1,0 +1,10 @@
+<h1>New Skill</h1>
+<%= form_for @skill, :html => {:id => "new_skill"} do |f|%>
+<%= f.label :bio %>
+<%= f.text_field :bio %>
+<%= f.label :skills %>
+<%= f.text_field :skills%>
+<%= f.label :tolearn %>
+<%= f.text_field :tolearn %>
+<%= f.submit%>
+<% end %>

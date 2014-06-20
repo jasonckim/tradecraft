@@ -1,0 +1,7 @@
+<h1><%= current_user.username.capitalize %></h1>
+
+<% @skills.each do |s| %>
+<h3>Bio: <%=s.skills%></h3>
+<h3>Your Skills: <%=s.skills%></h3>
+<h3>You Want to Learn: <%=s.tolearn%></h3>
+<% end %>

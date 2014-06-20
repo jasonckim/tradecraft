@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
-  
-  devise_for :users
 
+  devise_for :users
   resources :skills
+
+  root to: 'skills#landing'
+  get '/about', to: 'skills#about', as: 'about'
+  get '/profile', to: 'skills#profile', as: 'profile'
+
+  # get '/search', to: 'movies#show', as: 'search'
 end
 
 #                   Prefix Verb   URI Pattern                    Controller#Action
