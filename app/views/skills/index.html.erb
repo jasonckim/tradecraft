@@ -2,3 +2,8 @@
 
 <p>category</p>
 <p>skill</p>
+
+<% @user.each do |s| %>
+<h3>Bio: <%=s.bio%></h3>
+<h3>Pic: <%=s.pic%></h3>
+<% end %>

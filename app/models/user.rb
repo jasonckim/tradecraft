@@ -6,6 +6,8 @@ class User < ActiveRecord::Base
 
   attr_accessor :login
 
+  has_many :skills
+
  def self.find_for_database_authentication(warden_conditions)
     conditions = warden_conditions.dup
     if login = conditions.delete(:login)

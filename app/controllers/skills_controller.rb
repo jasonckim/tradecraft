@@ -6,7 +6,9 @@ class SkillsController < ApplicationController
 
   def profile
     @skills = Skill.all
-    @skill = Skill.new
+    #@user = User.all
+    # @user.current = User.find(params[:user_id])
+    # @user = User.where(id: params[:user_id])
   end
 
   def about
@@ -15,6 +17,7 @@ class SkillsController < ApplicationController
 
   def index
     @skills = Skill.all
+    @user = User.all
     #@skill = Skill.find(params[:id])
   end
 

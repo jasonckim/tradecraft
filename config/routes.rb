@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => "registrations" }
   resources :skills
+  resources :user_steps
 
   root to: 'skills#landing'
   get '/about', to: 'skills#about', as: 'about'
@@ -10,7 +11,7 @@ Rails.application.routes.draw do
   # get '/search', to: 'movies#show', as: 'search'
 end
 
-#                   Prefix Verb   URI Pattern                    Controller#Action
+#  Prefix Verb   URI Pattern                    Controller#Action
 #         new_user_session GET    /users/sign_in(.:format)       devise/sessions#new
 #             user_session POST   /users/sign_in(.:format)       devise/sessions#create
 #     destroy_user_session DELETE /users/sign_out(.:format)      devise/sessions#destroy
@@ -34,3 +35,14 @@ end
 #                          PATCH  /skills/:id(.:format)          skills#update
 #                          PUT    /skills/:id(.:format)          skills#update
 #                          DELETE /skills/:id(.:format)          skills#destroy
+#               user_steps GET    /user_steps(.:format)          user_steps#index
+#                          POST   /user_steps(.:format)          user_steps#create
+#            new_user_step GET    /user_steps/new(.:format)      user_steps#new
+#           edit_user_step GET    /user_steps/:id/edit(.:format) user_steps#edit
+#                user_step GET    /user_steps/:id(.:format)      user_steps#show
+#                          PATCH  /user_steps/:id(.:format)      user_steps#update
+#                          PUT    /user_steps/:id(.:format)      user_steps#update
+#                          DELETE /user_steps/:id(.:format)      user_steps#destroy
+#                     root GET    /                              skills#landing
+#                    about GET    /about(.:format)               skills#about
+#                  profile GET    /profile(.:format)             skills#profile

@@ -32,6 +32,8 @@ gem 'devise'
 
 gem 'json'
 
+gem 'wicked'
+
 gem 'acts-as-taggable-on', '~> 3.2.6'
 
 group :production do
