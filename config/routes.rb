@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   root to: 'skills#landing'
   get '/about', to: 'skills#about', as: 'about'
   get '/profile', to: 'skills#profile', as: 'profile'
+  get '/profile', to: 'skills#profile', as: 'user_root'
 
   # get '/search', to: 'movies#show', as: 'search'
 end

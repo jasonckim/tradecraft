@@ -10,10 +10,14 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require bootstrap.min.js
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
 
+$(document).ready(function{
+  $('.carousel').carousel();
+});
 
 $(document).ready(function(){
   $('#new_skill').on('submit', function(event){
