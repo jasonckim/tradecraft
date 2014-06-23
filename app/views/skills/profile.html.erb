@@ -1,7 +1,22 @@
-<h1><%= current_user.username.capitalize %></h1>
-
+<h1><%= current_user.username.capitalize %></h1><%= link_to "Add Skill", new_skill_path %>
+<br>
 <img src="<%= @current_user.pic%>" class="circular" />
 
 <br>
 
-Bio: <%= @current_user.bio %>
+<h1>Bio:</h1> <%= @current_user.bio %>
+
+
+<h1>Skills</h1>
+<ul>
+  <% @user_skill.each do |s| %>
+    <li><%=s.skill%></li>
+  <% end %>
+</ul>
+
+<h1>Wants to Learn:</h1>
+<ul>
+  <% @user_skill.each do |s| %>
+    <li></b><%=s.tolearn%></li>
+  <% end %>
+</ul>

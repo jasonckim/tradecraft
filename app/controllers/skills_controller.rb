@@ -5,8 +5,13 @@ class SkillsController < ApplicationController
   end
 
   def profile
-    @skills = Skill.all
+    # @skills = Skill.all
     @current_user = current_user
+    @skill = @current_user.skills.new
+    @user_skill = @current_user.skills.all
+    # @user_skill = @current_user.skills.find(params[:id])
+    # @user_skill = @current_user.skills.find(params[:current_user.id])
+    # @user_skill = current_user.skills.find(params[:user_id])
     # @user = User.where(id: params[:user_id])
   end
 
@@ -15,8 +20,9 @@ class SkillsController < ApplicationController
   end
 
   def index
-    @skills = Skill.all
-    @user = User.all
+    # @skills = Skill.all
+    # @user = User.all
+    @skill = Skill.search(params[:search])
     #@skill = Skill.find(params[:id])
   end
 
@@ -25,7 +31,9 @@ class SkillsController < ApplicationController
   end
 
   def new
-    @skill = Skill.new
+    @current_user = current_user
+    @skill = @current_user.skills.new
+    # @skill = Skill.new
   end
 
   def create
@@ -36,6 +44,7 @@ class SkillsController < ApplicationController
     respond_to do |format|
       if @skill.save
         format.json { render json: @skill, status: :created}
+        format.html {redirect_to profile_path}
       else
         format.json { render json: @skill.errors, status: :unprocessable_entity }
       end
@@ -60,7 +69,7 @@ class SkillsController < ApplicationController
 
   private
     def skill_params
-      params.require(:skill).permit(:bio, :pic, :skills, :tolearn )
+      params.require(:skill).permit(:skill, :tolearn, :user_id )
     end
 
 end

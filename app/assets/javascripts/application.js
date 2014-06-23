@@ -10,22 +10,21 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require bootstrap.min.js
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap.js
 //= require_tree .
 
-$(document).ready(function{
-  $('.carousel').carousel();
+$(document).ready(function(){
+  $('#myCarousel').carousel();
 });
+
 
 $(document).ready(function(){
   $('#new_skill').on('submit', function(event){
     event.preventDefault();
     var form = $(this);
-    var username = $('#skill_username').val();
-    var bio = $('#skill_bio').val();
-    var skill = $('#skill_skills').val();
+    var skill = $('#skill_skill').val();
     var tolearn = $('#skill_tolearn').val();
 
     $.ajax({
@@ -33,8 +32,6 @@ $(document).ready(function(){
       method: form.attr('method'),
       data: {
         "skill": {
-          "username": username,
-          "bio": bio,
           "skill": skill,
           "tolearn": tolearn
         }
@@ -43,7 +40,7 @@ $(document).ready(function(){
       success: function(data) {
         console.log(data);
         var ul = $('ul')
-        var skill =  "<li><b>"+data.username+"</b> - " +data.bio + "</li>";
+        var skill =  "<li><b>"+data.skill+ " " + data.tolearn + "</b></li>";
         ul.append(skill);
         $(':text').val('');
       },

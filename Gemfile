@@ -36,13 +36,19 @@ gem 'wicked'
 
 gem 'acts-as-taggable-on', '~> 3.2.6'
 
+gem 'faker'
+
 group :production do
   gem 'rails_12factor'
 end
 
 group :development, :test do
   gem 'dotenv-rails'
+  gem "better_errors"
+
 end
+
+gem "binding_of_caller"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

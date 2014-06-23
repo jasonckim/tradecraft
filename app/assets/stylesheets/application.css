@@ -23,3 +23,19 @@
 	-moz-border-radius: 100px;
 	background: url(http://link-to-your/image.jpg) no-repeat;
 	}
+
+.jumbotron{
+	background-image: url("http://i.imgur.com/VipRc60.jpg");
+	background-size: cover;
+	color: white;
+}
+
+.profile_pic{
+	width: 160px;
+	height: 184px;
+}
+
+
+
+
+

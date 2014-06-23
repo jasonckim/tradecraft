@@ -1,9 +1,9 @@
 <h1>Search Skills</h1>
 
-<p>category</p>
-<p>skill</p>
-
-<% @user.each do |s| %>
-<h3>Bio: <%=s.bio%></h3>
-<h3>Pic: <%=s.pic%></h3>
+<%= form_tag skills_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
 <% end %>
+
