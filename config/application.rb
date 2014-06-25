@@ -22,6 +22,6 @@ module Tradecraft
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     config.assets.paths << Rails.root.join('vendor', 'assets', 'fonts')
-    config.assets.precompile += %w(.svg .eot .woff .ttf)
+     # config.assets.paths << "#{Rails}/vendor/assets/fonts"
   end
 end

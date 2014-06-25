@@ -1,6 +1,104 @@
-<h1>How It Works</h1>
+<br>
+<h1 style="text-align:center">How it Works</h1>
 
-<h4><%= Faker::Lorem.paragraph %></h4>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6" id="left_grid_landing">
+      <h3> <%= Faker::Company.catch_phrase %>  </h3>
+      <p> <%= Faker::Lorem.paragraph %> </p>
+      <p> <%= Faker::Lorem.paragraph %> </p>
+      <p> <%= Faker::Lorem.paragraph %> </p>
+      <p> <%= Faker::Lorem.paragraph %> </p>
+    </div>
+    <div class="col-md-6" id="left_grid_landing">
+      <h3> <%= Faker::Company.catch_phrase %>  </h3>
+      <p> <%= Faker::Lorem.paragraph %> </p>
+      <p> <%= Faker::Lorem.paragraph %> </p>
+      <p> <%= Faker::Lorem.paragraph %> </p>
+      <p> <%= Faker::Lorem.paragraph %> </p>
+    </div>
+  </div>
+</div>
 
-<%= link_to "Search Skills", skills_path  %>
-<%= link_to "Profile", profile_path%>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="http://i.imgur.com/NmTl3q4.jpg?1" alt="First slide" >
+      <div class="carousel-caption">
+           <h3>cool</h3>
+    	<p>bean</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="http://i.imgur.com/0l8YJku.jpg?1" alt="Second slide" >
+        <div class="carousel-caption">
+          <h3>thing</h3>
+      	   <p>two</p>
+        </div>
+    </div>
+
+    <div class="item">
+      <img src="http://i.imgur.com/kfJWBq3.jpg?1" alt="Third slide" >
+        <div class="carousel-caption">
+          <h3>thing</h3>
+           <p>two</p>
+        </div>
+    </div>
+  </div>
+
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <h3>Learn an instrument</h3>
+      <img class="profile_pic" src="http://i.imgur.com/4gwJQJs.jpg" />
+      <h4> Melissa Lee </h4>
+      <p> <%= Faker::Lorem.paragraph %> </p>
+    </div>
+    <div class="col-md-3">
+      <h3>Learn to paint</h3>
+      <img class="profile_pic" src="http://i.imgur.com/AxEnZHy.jpg">
+      <h4> Frank Chun </h4>
+      <p> <%= Faker::Lorem.paragraph %> </p>
+    </div>
+    <div class="col-md-3">
+      <h3>Learn to cook</h3>
+      <img class="profile_pic" src="http://i.imgur.com/qtZq40A.jpg">
+      <h4> Sarah Morgan </h4>
+      <p> <%= Faker::Lorem.paragraph %> </p>
+    </div>
+    <div class="col-md-3">
+      <h3>Learn to code</h3>
+      <img class="profile_pic" src="http://i.imgur.com/h64F8HR.jpg">
+      <h4> John Rodriguez </h4>
+      <p> <%= Faker::Lorem.paragraph %> </p>
+    </div>
+  </div>
+</div>
+
+<br>
+<br>

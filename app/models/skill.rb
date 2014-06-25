@@ -4,10 +4,10 @@ class Skill < ActiveRecord::Base
 
   def self.search(search)
     if search
-      where(:conditions => ['name LIKE ?', "%#{search}%"])
+      q = "%#{search}%"
+      where('skill LIKE ?',q)
     else
-      :lol
-
+      scoped
     end
   end
 

@@ -38,6 +38,12 @@ gem 'acts-as-taggable-on', '~> 3.2.6'
 
 gem 'faker'
 
+gem 'area'
+
+gem 'pry'
+
+gem 'bootstrap_form'
+
 group :production do
   gem 'rails_12factor'
 end
@@ -49,6 +55,8 @@ group :development, :test do
 end
 
 gem "binding_of_caller"
+
+# gem 'bootstrap-glyphicons'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

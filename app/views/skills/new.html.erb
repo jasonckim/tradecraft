@@ -1,9 +1,18 @@
-<h1>New Skill</h1>
+<h1>What are your skills?</h1>
 <%= form_for @skill, :html => {:id => "new_skill"} do |f|%>
+<h3>Category:</h3>
+<%= f.select :tag, options_for_select([["Art", "art"], ["Culinary", "culinary"], ["Language", "language"], ["Music", "music"], ["Programming", "programming"], ["Sports", "sports"]], @skill.tag) %>
+<br>
+<br>
 <%= f.label :skill %>
 <%= f.text_field :skill%>
+<h1>What do you want to learn?</h1>
+<h3>Category:</h3>
+<%= f.select :learntag, options_for_select([["Art", "art"], ["Culinary", "culinary"], ["Language", "language"], ["Music", "music"], ["Programming", "programming"], ["Sports", "sports"]], @skill.tag) %>
+<br>
+<br>
 <%= f.label :tolearn %>
 <%= f.text_field :tolearn %>
 <%= f.hidden_field :user_id, value: current_user.id %>
-<%= f.submit%>
+<%= f.submit "Submit"%>
 <% end %>

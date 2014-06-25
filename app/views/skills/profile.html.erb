@@ -1,4 +1,5 @@
-<h1><%= current_user.username.capitalize %></h1><%= link_to "Add Skill", new_skill_path %>
+<h1><%= current_user.username.capitalize %></h1>
+<h3> <%= current_user.zipcode.to_region%> </h3>
 <br>
 <img src="<%= @current_user.pic%>" class="circular" />
 
@@ -6,17 +7,21 @@
 
 <h1>Bio:</h1> <%= @current_user.bio %>
 
+<br>
+<br>
+
+<%= link_to "Add Skill", new_skill_path %>
 
 <h1>Skills</h1>
 <ul>
   <% @user_skill.each do |s| %>
-    <li><%=s.skill%></li>
+    <li><%=s.skill%> - <%= s.tag %></li> 
   <% end %>
 </ul>
 
 <h1>Wants to Learn:</h1>
 <ul>
   <% @user_skill.each do |s| %>
-    <li></b><%=s.tolearn%></li>
+    <li></b><%=s.tolearn%> - <%= s.learntag %></li>
   <% end %>
 </ul>

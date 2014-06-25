@@ -4,26 +4,28 @@ class SkillsController < ApplicationController
     #landing page
   end
 
+  def about
+    #how it works page
+  end
+
   def profile
-    # @skills = Skill.all
     @current_user = current_user
     @skill = @current_user.skills.new
     @user_skill = @current_user.skills.all
-    # @user_skill = @current_user.skills.find(params[:id])
-    # @user_skill = @current_user.skills.find(params[:current_user.id])
-    # @user_skill = current_user.skills.find(params[:user_id])
-    # @user = User.where(id: params[:user_id])
-  end
-
-  def about
-    #how it works page
   end
 
   def index
     # @skills = Skill.all
     # @user = User.all
-    @skill = Skill.search(params[:search])
-    #@skill = Skill.find(params[:id])
+    # @skill = Skill.search(params[:search])
+    # @skill = Skill.find(params[:id])
+    # @users = User.joins(:skill).where(skills: {skill: skill}, developer: false, admin: false)
+    # @skills = Skill.search(params[:search])
+  end
+
+  def results
+    #shows search results
+    @skills = Skill.search(params[:search])
   end
 
   def show
@@ -37,18 +39,18 @@ class SkillsController < ApplicationController
   end
 
   def create
-    # @skill = Skill.create(skills_param)
-    # redirect_to about_path
-    @skill = Skill.new(skill_params)
+    @skill = Skill.create(skill_params)
+    redirect_to about_path
+    # @skill = Skill.new(skill_params)
 
-    respond_to do |format|
-      if @skill.save
-        format.json { render json: @skill, status: :created}
-        format.html {redirect_to profile_path}
-      else
-        format.json { render json: @skill.errors, status: :unprocessable_entity }
-      end
-    end
+    # respond_to do |format|
+    #   if @skill.save
+    #     format.json { render json: @skill, status: :created}
+    #     format.html {redirect_to profile_path}
+    #   else
+    #     format.json { render json: @skill.errors, status: :unprocessable_entity }
+    #   end
+    # end
   end
 
   def edit
@@ -69,7 +71,7 @@ class SkillsController < ApplicationController
 
   private
     def skill_params
-      params.require(:skill).permit(:skill, :tolearn, :user_id )
+      params.require(:skill).permit(:skill, :tolearn, :user_id, :tag, :learntag )
     end
 
 end

@@ -1,14 +1,21 @@
-<%= form_for @user, url: wizard_path do |f| %>
-
-  <h3>Tell us about yourself</h3>
-
-  <div><%= f.label :bio %><br />
-    <%= f.text_area :bio, rows: 5 %> 
-  </div>
-
-  <div><%= f.label :pic, "Upload Profile Picture URL" %><br />
-    <%= f.text_field :pic %>
-  </div>
-
-  <div><%= f.submit "Sign up" %></div>
+<% content_for :body_type do%>
+  signuppage
 <% end %>
+
+<div class="signuppage2">
+<%= bootstrap_form_for @user, url: wizard_path do |f| %>
+
+  <h3 style="text-align:center">Tell us about yourself</h3>
+
+  <div class="col-md-4 col-md-offset-4"><%= f.text_area :bio, rows: 5, placeholder: 'Hi! My name is...' %> 
+  </div>
+
+  <div class="col-md-4 col-md-offset-4"><%= f.text_field :pic, autofocus: true, placeholder: 'Upload a URL for Your Profile Picture' %>
+  </div>
+
+  <div class="col-md-4 col-md-offset-4"><%= f.text_field :zipcode, autofocus: true, placeholder: 'Enter Your Zip Code' %>
+  </div>
+
+  <div class="col-md-4 col-md-offset-4"><%= f.submit "Sign up" %></div>
+<% end %>
+</div>

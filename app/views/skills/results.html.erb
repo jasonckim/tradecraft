@@ -1,0 +1,13 @@
+<br>
+<br>
+<div class="container">
+	<div class="row">
+		<% @skills.each do |s| %>
+			<%= link_to s.user.username, profile_path %>
+			<% s.user.skills.each do |sk| %>
+		<%= sk.skill %>
+			<% end %>
+		<% end %>
+	</div>
+</div>
+

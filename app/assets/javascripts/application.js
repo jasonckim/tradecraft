@@ -20,33 +20,33 @@ $(document).ready(function(){
 });
 
 
-$(document).ready(function(){
-  $('#new_skill').on('submit', function(event){
-    event.preventDefault();
-    var form = $(this);
-    var skill = $('#skill_skill').val();
-    var tolearn = $('#skill_tolearn').val();
+// $(document).ready(function(){
+//   $('#new_skill').on('submit', function(event){
+//     event.preventDefault();
+//     var form = $(this);
+//     var skill = $('#skill_skill').val();
+//     var tolearn = $('#skill_tolearn').val();
 
-    $.ajax({
-      url: form.attr('action'),
-      method: form.attr('method'),
-      data: {
-        "skill": {
-          "skill": skill,
-          "tolearn": tolearn
-        }
-      },
-      dataType: "json",
-      success: function(data) {
-        console.log(data);
-        var ul = $('ul')
-        var skill =  "<li><b>"+data.skill+ " " + data.tolearn + "</b></li>";
-        ul.append(skill);
-        $(':text').val('');
-      },
-      error: function(){
-        alert("Server is broken!");
-      }
-    });
-  });
-});
+//     $.ajax({
+//       url: form.attr('action'),
+//       method: form.attr('method'),
+//       data: {
+//         "skill": {
+//           "skill": skill,
+//           "tolearn": tolearn
+//         }
+//       },
+//       dataType: "json",
+//       success: function(data) {
+//         console.log(data);
+//         var ul = $('ul')
+//         var skill =  "<li><b>"+data.skill+ " " + data.tolearn + "</b></li>";
+//         ul.append(skill);
+//         $(':text').val('');
+//       },
+//       error: function(){
+//         alert("Server is broken!");
+//       }
+//     });
+//   });
+// });
