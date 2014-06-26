@@ -14,17 +14,18 @@ class SkillsController < ApplicationController
     @user_skill = @current_user.skills.all
   end
 
+  def publicprofile
+    @user = User.find(params[:id])
+    @user_skill = @user.skills.all
+    render "public_profile"
+  end
+
   def index
-    # @skills = Skill.all
-    # @user = User.all
-    # @skill = Skill.search(params[:search])
-    # @skill = Skill.find(params[:id])
-    # @users = User.joins(:skill).where(skills: {skill: skill}, developer: false, admin: false)
-    # @skills = Skill.search(params[:search])
+    # doing a search on this page
   end
 
   def results
-    #shows search results
+    @current_user = current_user
     @skills = Skill.search(params[:search])
   end
 
@@ -35,12 +36,11 @@ class SkillsController < ApplicationController
   def new
     @current_user = current_user
     @skill = @current_user.skills.new
-    # @skill = Skill.new
   end
 
   def create
     @skill = Skill.create(skill_params)
-    redirect_to about_path
+    redirect_to profile_path
     # @skill = Skill.new(skill_params)
 
     # respond_to do |format|

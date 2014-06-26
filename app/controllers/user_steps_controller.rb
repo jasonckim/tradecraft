@@ -16,7 +16,7 @@ class UserStepsController < ApplicationController
 
   private
     def user_params
-      params.require(:user).permit(:bio, :pic, :zipcode)
+      params.require(:user).permit(:bio, :pic, :zipcode, :banner_url)
     end
 
 end

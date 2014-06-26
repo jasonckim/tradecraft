@@ -3,9 +3,16 @@
 <div class="container">
 	<div class="row">
 		<% @skills.each do |s| %>
-			<%= link_to s.user.username, profile_path %>
+			<%= link_to s.user.username, public_profile_path(s.user.id) %>
+			<%= s.user.zipcode.to_region %>
+			Distance: <%= distance_to_zipcode s.user.zipcode %>
+			<br>
+			<img src="<%= s.user.pic %>" class="circular" />
+			<h1>Skills:</h1>
 			<% s.user.skills.each do |sk| %>
-		<%= sk.skill %>
+		<ul>
+			<li><%= sk.skill %></li>
+		</ul>
 			<% end %>
 		<% end %>
 	</div>

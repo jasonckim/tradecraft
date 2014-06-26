@@ -30,6 +30,8 @@ gem 'pg'
 
 gem 'devise'
 
+gem 'typhoeus'
+
 gem 'json'
 
 gem 'wicked'
