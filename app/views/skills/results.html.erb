@@ -1,20 +1,30 @@
+<% content_for :body_type do%>
+	resultspage
+<% end %>
+
+<h1 style="text-align:center; color:white">Search Results:</h1>
+
 <br>
 <br>
-<div class="container">
-	<div class="row">
-		<% @skills.each do |s| %>
-			<%= link_to s.user.username, public_profile_path(s.user.id) %>
-			<%= s.user.zipcode.to_region %>
-			Distance: <%= distance_to_zipcode s.user.zipcode %>
-			<br>
+<div class="resultscontainer">
+	<div class="resultsrow">
+	<% @skills.each do |s| %>
+		<div id="resultspic">
 			<img src="<%= s.user.pic %>" class="circular" />
-			<h1>Skills:</h1>
+		</div>	
+		
+		<div id="resultsinfo">
+			<h1><%= link_to s.user.username, public_profile_path(s.user.id) %></h1>
+			<h3 style="color:white"><b>Lives in:</b> <%= s.user.zipcode.to_region %></h3>
+			<h3 style="color:white"><b>Distance:</b> <%= distance_to_zipcode s.user.zipcode %></h3>
 			<% s.user.skills.each do |sk| %>
-		<ul>
-			<li><%= sk.skill %></li>
-		</ul>
-			<% end %>
-		<% end %>
+				<h3 style="color:white"><b>Skills:</b> <%= sk.skill %></h3>
+		</div>
 	</div>
+	<hr>
+			<% end %>
+	<% end %>
 </div>
+
+
 

@@ -14,12 +14,20 @@
 .landingpage{
     //uses height 720px and width 100%
     background: 
+        url("http://i.imgur.com/lj0Ppw3.jpg") no-repeat center center; 
+    @include imagebackground;	
+}
+
+.landingcontainer{
+    background:
         linear-gradient(
-            rgba(124, 189, 255, 0.45), 
-            rgba(124, 189, 255, 0.45)),
-        url("http://i.imgur.com/PBAz9T5.jpg?1") no-repeat center center; 
-    @include imagebackground;
-	
+            rgba(211, 211, 211, 0.45), 
+            rgba(211, 211, 211, 0.45));
+    margin: 0 auto;
+    position: relative;
+    top: 4em;
+    width: 40%;
+    height: 450px;
 }
 
 #block{
@@ -67,7 +75,7 @@
 }
 
 .profilejumbotron{
-    background-image: url("http://i.imgur.com/qGepgMr.jpg");
+    background-image: url("http://i.imgur.com/LPySHQy.jpg");
     background-size: cover;
     height: 400px;
     width: 90%;
@@ -93,7 +101,15 @@
 .userprofile{
     background:
         url("http://i.imgur.com/U22TxKG.jpg"), 
-          linear-gradient(
+        linear-gradient(
+            rgba(147, 147, 147, 0.45), 
+            rgba(147, 147, 147, 0.45));
+}
+
+.publicprofile{
+    background:
+        url("http://i.imgur.com/U22TxKG.jpg"), 
+        linear-gradient(
             rgba(147, 147, 147, 0.45), 
             rgba(147, 147, 147, 0.45));
 }
@@ -101,5 +117,36 @@
 // #profileskill{
 //     bottom: 25em;   
 // }
+
+.aboutpage{
+    background:
+        url("http://i.imgur.com/2QRWNFg.jpg"),
+        linear-gradient(
+            rgba(147, 147, 147, 0.45), 
+            rgba(147, 147, 147, 0.45));
+}
+
+.newpage{
+    background-image: url("http://i.imgur.com/Ow1ZZOJ.jpg");
+    background-size: cover; 
+    color: white;
+}
+
+#resultsinfo{
+    position: relative;
+    left: 20%;
+    bottom: 15em;
+}
+
+.resultspage{
+    background-image: url("http://i.imgur.com/4ihPCNj.jpg");
+    background-size: cover;
+}
+
+
+
+
+
+
 
 

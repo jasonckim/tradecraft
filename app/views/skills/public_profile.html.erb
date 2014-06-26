@@ -1,29 +1,36 @@
-<br>
-<br>
-<img src="<%= @user.pic%>" class="circular" />
-<h1><%= @user.username.capitalize %></h1>
-<h3> Lives in <%= @user.zipcode.to_region%> </h3>
-<p>Contact: <%= @user.email %></p>
-<br>
+<% content_for :body_type do%>
+  publicprofile
+<% end %>
 
+<div class="profilejumbotron">
+	<div id="profilepicture">
+		<img src="<%= @user.pic%>" class="circular" />
+	</div>
+</div>
 
-<br>
+<div class="profilepagecontainer">
+<div class="profileinfo">
+	<h1><%= @user.username.capitalize %></h1>
+	<h3> Lives in <%= @user.zipcode.to_region%> </h3>
+	<h4> Contact: <%= @user.email %></h4>
+</div>
 
-<h1>Bio:</h1> <%= @user.bio %>
+<div class="col-md-6 col-md-offset-4" id="profilebio">
+	<h1>Bio:</h1> <%= @user.bio %>
+		<h1><%= @user.username.capitalize %>'s Skills:</h1>
+	<ul>
+	  <% @user_skill.each do |s| %>
+	    <li><h4><b><%= s.tag.upcase %></b>: <%=s.skill.capitalize%></h4>
+	   	</li> 
+	  <% end %>
+	</ul>
+		<h1><%= @user.username.capitalize %> wants to learn:</h1>
+	<ul>
+	  <% @user_skill.each do |s| %>
+	    <li><h4><b><%= s.learntag.upcase %></b>: <%=s.tolearn.capitalize %></h4></li>
+	  <% end %>
+	</ul>
+</div>
+</div>
 
-<br>
-<br>
-
-<h1>Skills</h1>
-<ul>
-  <% @user_skill.each do |s| %>
-    <li><%=s.skill%> - <%= s.tag %></li> 
-  <% end %>
-</ul>
-
-<h1>Wants to Learn:</h1>
-<ul>
-  <% @user_skill.each do |s| %>
-    <li></b><%=s.tolearn%> - <%= s.learntag %></li>
-  <% end %>
-</ul>
+</div>

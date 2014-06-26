@@ -27,7 +27,7 @@
 
 #logo_landing{
 	@include logo;
-	top: 12em;
+	top: 1em;
 }
 
 #logo_signin{
@@ -40,7 +40,7 @@
 
 .signinpage{
 	background: 
-    	url("http://i.imgur.com/YrPfopi.jpg") no-repeat center center; 
+    	url("http://i.imgur.com/HQtViLr.jpg") no-repeat center center; 
     -webkit-background-size: 100% 100%;
     -moz-background-size: 100% 100%;
     -o-background-size: 100% 100%;
@@ -67,6 +67,18 @@
 	position: relative;
 	top: 5em;
 }
+
+li { /* styles all li elements*/
+    list-style-type: none;
+}
+
+.edituserprofile{
+    background-image: url("http://i.imgur.com/pO6ZgSX.jpg");
+    background-size: cover;
+    color: white;
+}
+
+
 
 
 

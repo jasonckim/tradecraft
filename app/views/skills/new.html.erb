@@ -1,18 +1,34 @@
-<h1>What are your skills?</h1>
-<%= form_for @skill, :html => {:id => "new_skill"} do |f|%>
-<h3>Category:</h3>
-<%= f.select :tag, options_for_select([["Art", "art"], ["Culinary", "culinary"], ["Language", "language"], ["Music", "music"], ["Programming", "programming"], ["Sports", "sports"]], @skill.tag) %>
+<% content_for :body_type do%>
+  newpage
+<% end %>
+
 <br>
-<br>
-<%= f.label :skill %>
-<%= f.text_field :skill%>
-<h1>What do you want to learn?</h1>
-<h3>Category:</h3>
-<%= f.select :learntag, options_for_select([["Art", "art"], ["Culinary", "culinary"], ["Language", "language"], ["Music", "music"], ["Programming", "programming"], ["Sports", "sports"]], @skill.tag) %>
-<br>
-<br>
-<%= f.label :tolearn %>
-<%= f.text_field :tolearn %>
-<%= f.hidden_field :user_id, value: current_user.id %>
-<%= f.submit "Submit"%>
+<h1 style="color:white" class="col-md-4 col-md-offset-4">What are your skills?</h1>
+	<%= bootstrap_form_for @skill, :html => {:id => "new_skill"} do |f|%>
+
+<h3 style="color:white" class="col-md-4 col-md-offset-4">Category:</h3>
+<div class="col-md-4 col-md-offset-4">
+	<%= f.select :tag, options_for_select([["Art", "art"], ["Culinary", "culinary"], ["Language", "language"], ["Mechanical", "mechnical"], ["Music", "music"], ["Programming", "programming"], ["Sports", "sports"], ["Misc.", "misc."]], @skill.tag), hide_label: true %>
+</div>
+
+<div class="col-md-4 col-md-offset-4">
+<%= f.label :skill, 'What are your skills?' %> 
+	<%= f.text_field :skill, placeholder: 'Painting, singing, cooking...', hide_label: true%>
+</div>
+
+<h1 style="color:white" class="col-md-4 col-md-offset-4">What do you want to learn?</h1>
+
+<h3 style="color:white" class="col-md-4 col-md-offset-4">Category:</h3>
+<div class="col-md-4 col-md-offset-4">
+	<%= f.select :learntag, options_for_select([["Art", "art"], ["Culinary", "culinary"], ["Language", "language"], ["Mechanical", "mechnical"], ["Music", "music"], ["Programming", "programming"], ["Sports", "sports"], ["Misc.", "misc."]], @skill.tag), hide_label: true %>
+</div>
+
+<div class="col-md-4 col-md-offset-4">
+	<%= f.label :tolearn, 'What do you want to learn?' %>
+	<%= f.text_field :tolearn, placeholder: 'Basketball, programming, spanish...', hide_label: true %>
+</div>
+	<%= f.hidden_field :user_id, value: current_user.id %>
+<div class="col-md-4 col-md-offset-4">
+	<%= f.submit "Submit"%>
+</div>
 <% end %>
