@@ -2,26 +2,23 @@
 	resultspage
 <% end %>
 
-<h1 style="text-align:center; color:white">Search Results:</h1>
+<h1 style="text-align:center">Search Results:</h1>
 
-<br>
-<br>
 <div class="resultscontainer">
-	<div class="resultsrow">
 	<% @skills.each do |s| %>
+	<div class= "col-md-6" id="userresults_<%=s[:user_id] %>">
 		<div id="resultspic">
 			<img src="<%= s.user.pic %>" class="circular" />
 		</div>	
 		
 		<div id="resultsinfo">
-			<h1><%= link_to s.user.username, public_profile_path(s.user.id) %></h1>
-			<h3 style="color:white"><b>Lives in:</b> <%= s.user.zipcode.to_region %></h3>
-			<h3 style="color:white"><b>Distance:</b> <%= distance_to_zipcode s.user.zipcode %></h3>
+			<h1 style="color:black"><%= link_to s.user.username, public_profile_path(s.user.id) %></h1>
+			<h3 style="color:black"><b>Lives in:</b> <%= s.user.zipcode.to_region %></h3>
+			<h3 style="color:black"><b>Distance:</b> <%= distance_to_zipcode s.user.zipcode %></h3>
 			<% s.user.skills.each do |sk| %>
-				<h3 style="color:white"><b>Skills:</b> <%= sk.skill %></h3>
+				<h3 style="color:black"><b>Skills:</b> <%= sk.skill %></h3>
 		</div>
 	</div>
-	<hr>
 			<% end %>
 	<% end %>
 </div>
