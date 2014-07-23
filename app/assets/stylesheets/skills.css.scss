@@ -132,10 +132,10 @@
     color: white;
 }
 
-// .resultspage{
-//     background-image: url("http://31.media.tumblr.com/85969617dda79463cdd1780359e2379b/tumblr_n8gyuislNa1st5lhmo1_1280.jpg");
-//     background-size: cover; 
-// }
+.resultspage{
+    background-image: url("http://i.imgur.com/U22TxKG.jpg");
+    background-size: cover; 
+}
 
 #resultspic{
     width: 200px;
@@ -155,7 +155,7 @@
     box-shadow: 5px 5px 7px rgba(33,33,33,.7);
 }
 
-#userresults_2{
+#userresults_1{
     height: 210px;
     -moz-box-shadow:5px 5px 7px rgba(33,33,33,.7);
     -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
@@ -169,10 +169,25 @@
             rgba(147, 147, 147, 0.45));
 }
 
+#userresults_2{
+    height: 210px;
+    -moz-box-shadow:5px 5px 7px rgba(33,33,33,.7);
+    -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    position: relative;
+    left: 2em;
+    width: 600px;
+    background: 
+        linear-gradient(
+            rgba(147, 147, 147, 0.45), 
+            rgba(147, 147, 147, 0.45));
+}
+
 #userresults_3{
     height: 210px;
     position: relative;
-    left: 2em;
+    top: 1em;
+    left: 1em;
     width: 600px;
     -moz-box-shadow:5px 5px 7px rgba(33,33,33,.7);
     -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
@@ -187,7 +202,7 @@
     height: 210px;
     position: relative;
     top: 1em;
-    left: 1em;
+    left: 2em;
     width: 600px;
     -moz-box-shadow:5px 5px 7px rgba(33,33,33,.7);
     -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
@@ -201,8 +216,8 @@
 #userresults_5{
     height: 210px;
     position: relative;
-    top: 1em;
-    left: 2em;
+    top: 2em;
+    left: 1em;
     width: 600px;
     -moz-box-shadow:5px 5px 7px rgba(33,33,33,.7);
     -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
@@ -213,5 +228,19 @@
             rgba(147, 147, 147, 0.45));
 }
 
+#userresults_6{
+    height: 210px;
+    position: relative;
+    top: 2em;
+    left: 2em;
+    width: 600px;
+    -moz-box-shadow:5px 5px 7px rgba(33,33,33,.7);
+    -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    background: 
+        linear-gradient(
+            rgba(147, 147, 147, 0.45), 
+            rgba(147, 147, 147, 0.45));
+}
 
 
