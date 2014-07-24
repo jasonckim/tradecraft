@@ -114,28 +114,95 @@
             rgba(147, 147, 147, 0.45));
 }
 
+.aboutpage{
+    background-image: url("");
+    background-size: cover;
+}
+
+// #gearsimage{
+//     position: relative;
+   
+//     height: 200px;
+//     width: 200px;
+// }
+
+// .container-about{
+//     position: relative;
+//     z-index: 10;
+// }
+
+#left_grid_landing{
+        background:
+        linear-gradient(
+            rgba(211, 211, 211, 0.45), 
+            rgba(211, 211, 211, 0.45));
+          right: 0.5em;
+}
+
+#right_grid_landing{
+   background:
+        linear-gradient(
+            rgba(211, 211, 211, 0.45), 
+            rgba(211, 211, 211, 0.45));
+          left: 0.5em;
+}
+
+#john{
+    text-align: center;
+    width: 250px;
+    left: 12.5em;
+    background:
+        linear-gradient(
+            rgba(211, 211, 211, 0.45), 
+            rgba(211, 211, 211, 0.45));
+}
+
+#sarah{
+    text-align: center;
+    width: 250px;
+    left: 8em;
+    background:
+        linear-gradient(
+            rgba(211, 211, 211, 0.45), 
+            rgba(211, 211, 211, 0.45));
+}
+
+#frank{
+    text-align: center;
+    width: 250px;
+    left: 3.5em;
+    background:
+        linear-gradient(
+            rgba(211, 211, 211, 0.45), 
+            rgba(211, 211, 211, 0.45));
+}
+
+#melissa{
+    text-align: center;
+    width: 250px;
+    right: 0.5em;
+    background:
+        linear-gradient(
+            rgba(211, 211, 211, 0.45), 
+            rgba(211, 211, 211, 0.45));
+}
+
 // #profileskill{
 //     bottom: 25em;   
 // }
 
-// .aboutpage{
-//     background:
-//         url("http://i.imgur.com/U22TxKG.jpg"),
-//         linear-gradient(
-//             rgba(147, 147, 147, 0.45), 
-//             rgba(147, 147, 147, 0.45));
-// }
+
 
 .newpage{
-    background-image: url("http://i.imgur.com/Ow1ZZOJ.jpg");
+    background-image: url("http://38.media.tumblr.com/b4c26c6a82aafe7db9601801c5a571f9/tumblr_n8gyqdqA4E1st5lhmo1_1280.jpg");
     background-size: cover; 
     color: white;
 }
 
-.resultspage{
-    background-image: url("http://i.imgur.com/U22TxKG.jpg");
-    background-size: cover; 
-}
+// .resultspage{
+//     background-image: url("http://i.imgur.com/U22TxKG.jpg");
+//     background-size: cover; 
+// }
 
 #resultspic{
     width: 200px;

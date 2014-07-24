@@ -14,7 +14,7 @@
 		<div id="resultsinfo">
 			<h1 style="color:black"><%= link_to s.user.username, public_profile_path(s.user.id) %></h1>
 			<h3 style="color:black"><b>Lives in:</b> <%= s.user.zipcode.to_region %></h3>
-			
+			<h3 style="color:black"><b>Distance:</b> <%= distance_to_zipcode s.user.zipcode %></h3>
 			<% s.user.skills.each do |sk| %>
 				<h3 style="color:black"><b>Skills:</b> <%= sk.skill %></h3>
 		</div>
