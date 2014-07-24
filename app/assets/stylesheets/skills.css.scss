@@ -152,61 +152,37 @@
           left: 0.5em;
 }
 
-#john{
+@mixin aboutpics($left, $right){
     text-align: center;
     width: 250px;
-    left: 12.5em;
+    left: $left;
+    right: $right;
     background:
         linear-gradient(
             rgba(131, 170, 147, 0.45), 
             rgba(131, 170, 147, 0.45));
+}
+
+#john{
+    @include aboutpics(12.5em, 0em)
 }
 
 #sarah{
-    text-align: center;
-    width: 250px;
-    left: 8em;
-    background:
-      linear-gradient(
-            rgba(131, 170, 147, 0.45), 
-            rgba(131, 170, 147, 0.45));
+    @include aboutpics(8em, 0em)
 }
 
 #frank{
-    text-align: center;
-    width: 250px;
-    left: 3.5em;
-    background:
-       linear-gradient(
-            rgba(131, 170, 147, 0.45), 
-            rgba(131, 170, 147, 0.45));
+    @include aboutpics(3.5em, 0em)
 }
 
 #melissa{
-    text-align: center;
-    width: 250px;
-    right: 0.5em;
-    background:
-        linear-gradient(
-            rgba(131, 170, 147, 0.45), 
-            rgba(131, 170, 147, 0.45));
+    @include aboutpics(0em, 0.5em)
 }
-
-// #profileskill{
-//     bottom: 25em;   
-// }
-
-
 
 .newpage{
     background-image: url("http://38.media.tumblr.com/b4c26c6a82aafe7db9601801c5a571f9/tumblr_n8gyqdqA4E1st5lhmo1_1280.jpg");
     background-size: cover; 
     color: white;
-}
-
-.resultspage{
-    background-image: url("");
-    background-size: cover; 
 }
 
 #resultspic{
@@ -220,129 +196,66 @@
     bottom: 15em;
 }
 
-#userresults_1{
-    height: 210px;
-    -moz-box-shadow:5px 5px 7px rgba(33,33,33,.7);
-    -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
-    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
-}
-
-#userresults_1{
-    height: 210px;
+@mixin userresultscss($top, $left){
+     height: 210px;
     -moz-box-shadow:5px 5px 7px rgba(33,33,33,.7);
     -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
     box-shadow: 5px 5px 7px rgba(33,33,33,.7);
     position: relative;
-    left: 1em;
+    top:$top;
+    left: $left;
     width: 600px;
     background: 
         linear-gradient(
             rgba(147, 147, 147, 0.45), 
             rgba(147, 147, 147, 0.45));
+}
+
+@mixin userresultscssgreen($top, $left){
+    height: 210px;
+    -moz-box-shadow:5px 5px 7px rgba(33,33,33,.7);
+    -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    position: relative;
+    top:$top;
+    left: $left;
+    width: 600px;
+    background:
+        linear-gradient(
+            rgba(131, 170, 147, 0.45), 
+            rgba(131, 170, 147, 0.45));
+}
+
+#userresults_1{
+    @include userresultscss(0em, 1em)
 }
 
 #userresults_2{
-    height: 210px;
-    -moz-box-shadow:5px 5px 7px rgba(33,33,33,.7);
-    -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
-    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
-    position: relative;
-    left: 2em;
-    width: 600px;
-    background:
-      linear-gradient(
-            rgba(131, 170, 147, 0.45), 
-            rgba(131, 170, 147, 0.45));
+    @include userresultscssgreen(0em, 2em)
 }
 
 #userresults_3{
-    height: 210px;
-    position: relative;
-    top: 1em;
-    left: 1em;
-    width: 600px;
-    -moz-box-shadow:5px 5px 7px rgba(33,33,33,.7);
-    -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
-    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
-   background:
-      linear-gradient(
-            rgba(131, 170, 147, 0.45), 
-            rgba(131, 170, 147, 0.45));
+    @include userresultscssgreen(1em, 1em)
 }
 
 #userresults_4{
-    height: 210px;
-    position: relative;
-    top: 1em;
-    left: 2em;
-    width: 600px;
-    -moz-box-shadow:5px 5px 7px rgba(33,33,33,.7);
-    -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
-    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
-    background: 
-        linear-gradient(
-            rgba(147, 147, 147, 0.45), 
-            rgba(147, 147, 147, 0.45));
+    @include userresultscss(1em, 2em)
 }
 
 #userresults_5{
-    height: 210px;
-    position: relative;
-    top: 2em;
-    left: 1em;
-    width: 600px;
-    -moz-box-shadow:5px 5px 7px rgba(33,33,33,.7);
-    -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
-    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
-    background: 
-        linear-gradient(
-            rgba(147, 147, 147, 0.45), 
-            rgba(147, 147, 147, 0.45));
+    @include userresultscss(2em, 1em)
 }
 
 #userresults_6{
-    height: 210px;
-    position: relative;
-    top: 2em;
-    left: 2em;
-    width: 600px;
-    -moz-box-shadow:5px 5px 7px rgba(33,33,33,.7);
-    -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
-    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
-    background:
-      linear-gradient(
-            rgba(131, 170, 147, 0.45), 
-            rgba(131, 170, 147, 0.45));
+    @include userresultscssgreen(2em, 2em)
 }
 
 #userresults_7{
-    height: 210px;
-    position: relative;
-    top: 3em;
-    left: 1em;
-    width: 600px;
-    -moz-box-shadow:5px 5px 7px rgba(33,33,33,.7);
-    -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
-    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
-    background:
-      linear-gradient(
-            rgba(131, 170, 147, 0.45), 
-            rgba(131, 170, 147, 0.45));
+    @include userresultscssgreen(3em, 1em)
 }
 
 #userresults_8{
-    height: 210px;
-    position: relative;
-    top: 3em;
-    left: 2em;
-    width: 600px;
-    -moz-box-shadow:5px 5px 7px rgba(33,33,33,.7);
-    -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
-    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
-    background: 
-        linear-gradient(
-            rgba(147, 147, 147, 0.45), 
-            rgba(147, 147, 147, 0.45));
+    @include  userresultscss(3em, 2em)
 }
 
 
