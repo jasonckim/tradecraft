@@ -10,24 +10,24 @@
 
 <div class="profilepagecontainer">
 <div class="profileinfo">
-	<h1><%= @user.username.capitalize %></h1>
-	<h3> Lives in <%= @user.zipcode.to_region%> </h3>
-	<h4> Contact: <%= @user.email %></h4>
+	<h1 style="color:white"><%= @user.username.capitalize %></h1>
+	<h3 style="color:white"> Lives in <%= @user.zipcode.to_region%> </h3>
+	<h4 style="color:white"> Contact: <%= @user.email %></h4>
 </div>
 
 <div class="col-md-6 col-md-offset-4" id="profilebio">
-	<h1>Bio:</h1> <%= @user.bio %>
-		<h1><%= @user.username.capitalize %>'s Skills:</h1>
+	<h1 style="color:white">Bio:</h1> <p style="color:white"><%= @user.bio %></p>
+		<h1 style="color:white"><%= @user.username.capitalize %>'s Skills:</h1>
 	<ul>
 	  <% @user_skill.each do |s| %>
-	    <li><h4><b><%= s.tag.upcase %></b>: <%=s.skill.capitalize%></h4>
+	    <li><h4 style="color:white"><b><%= s.tag.upcase %></b>: <%=s.skill.capitalize%></h4>
 	   	</li> 
 	  <% end %>
 	</ul>
-		<h1><%= @user.username.capitalize %> wants to learn:</h1>
+		<h1 style="color:white"><%= @user.username.capitalize %> wants to learn:</h1>
 	<ul>
 	  <% @user_skill.each do |s| %>
-	    <li><h4><b><%= s.learntag.upcase %></b>: <%=s.tolearn.capitalize %></h4></li>
+	    <li><h4 style="color:white"><b><%= s.learntag.upcase %></b>: <%=s.tolearn.capitalize %></h4></li>
 	  <% end %>
 	</ul>
 </div>
