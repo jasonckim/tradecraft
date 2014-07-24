@@ -44,9 +44,9 @@
 .circular {
 	width: 200px;
 	height: 200px;
-	border-radius: 100px;
-	-webkit-border-radius: 100px;
-	-moz-border-radius: 100px;
+	border-radius: 35px;
+	-webkit-border-radius: 35px;
+	-moz-border-radius: 35px;
 }
 
 .searchpage{
@@ -86,6 +86,7 @@
 #profilepicture{
     position: relative;
     top: 18em;
+    left: 2.2em;
 }
 
 .profilepagecontainer{
